@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://51k7g0wlfbcl"]
+
+[ext_resource type="Texture2D" uid="uid://bp5h3pedqyp1s" path="res://Assets/Red_circle.svg.png" id="1_avmra"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_llkuv"]
+radius = 613.04
+
+[node name="Zone" type="Node2D" unique_id=44943583]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1873712719]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1820986044]
+shape = SubResource("CircleShape2D_llkuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=471808676]
+texture = ExtResource("1_avmra")

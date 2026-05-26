@@ -13,7 +13,7 @@ config_version=5
 config/name="High Tide"
 run/main_scene="uid://ccos82my76j4b"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [input]
 

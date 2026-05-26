@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyakn5qgy2fcw"
-path="res://.godot/imported/pngtree-boat-top-view-png-image_8750420.png-98b0366fb0efcf3ac212e97f0663ef04.ctex"
+uid="uid://br4016tx3x45d"
+path="res://.godot/imported/Island 1.jpg-7fb813dd6f72295f8051e57c3c112d87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pngtree-boat-top-view-png-image_8750420.png"
-dest_files=["res://.godot/imported/pngtree-boat-top-view-png-image_8750420.png-98b0366fb0efcf3ac212e97f0663ef04.ctex"]
+source_file="res://Assets/Island 1.jpg"
+dest_files=["res://.godot/imported/Island 1.jpg-7fb813dd6f72295f8051e57c3c112d87.ctex"]
 
 [params]
 
