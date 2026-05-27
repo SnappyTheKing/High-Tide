@@ -1,25 +1,22 @@
 [gd_scene format=3 uid="uid://ccos82my76j4b"]
 
-[ext_resource type="Texture2D" uid="uid://br4016tx3x45d" path="res://Assets/Island 1.jpg" id="1_j5yw3"]
-[ext_resource type="Texture2D" uid="uid://cte8j33kv5evy" path="res://Assets/Island 2.jpg" id="2_kldst"]
 [ext_resource type="PackedScene" uid="uid://c08c6mv3nbxtf" path="res://Scenes/player.tscn" id="3_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://dqkqv2qw1vhqq" path="res://Scenes/Map.tscn" id="3_kldst"]
+[ext_resource type="Texture2D" uid="uid://cemhiibnjiu74" path="res://Assets/Upscaled-Map.png" id="4_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://51k7g0wlfbcl" path="res://Scenes/zone.tscn" id="4_kldst"]
 
 [node name="Game" type="Node2D" unique_id=243380344]
 
-[node name="Island1" type="Sprite2D" parent="." unique_id=982827741]
-position = Vector2(-3871, -18207)
-scale = Vector2(44.055473, 44.05547)
-texture = ExtResource("1_j5yw3")
-
-[node name="Island2" type="Sprite2D" parent="." unique_id=367339514]
-position = Vector2(-21584, -5252.0005)
-rotation = 0.8150688
-scale = Vector2(54.270306, 54.27031)
-texture = ExtResource("2_kldst")
-
 [node name="Zone" parent="." unique_id=44943583 instance=ExtResource("4_kldst")]
 position = Vector2(2139, -12098)
 scale = Vector2(3.2091932, 3.2091932)
+
+[node name="UpscalemediaTransformed" type="Sprite2D" parent="." unique_id=396593413]
+visible = false
+scale = Vector2(12, 12)
+texture = ExtResource("4_b2bpf")
+
+[node name="Map" parent="." unique_id=273789858 instance=ExtResource("3_kldst")]
+scale = Vector2(12, 12)
 
 [node name="Player" parent="." unique_id=967191897 instance=ExtResource("3_b2bpf")]
