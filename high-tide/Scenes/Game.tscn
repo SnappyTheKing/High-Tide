@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqkqv2qw1vhqq" path="res://Scenes/Map.tscn" id="3_kldst"]
 [ext_resource type="Texture2D" uid="uid://cemhiibnjiu74" path="res://Assets/Upscaled-Map.png" id="4_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://51k7g0wlfbcl" path="res://Scenes/zone.tscn" id="4_kldst"]
+[ext_resource type="PackedScene" uid="uid://bm0ixu5kkpcvc" path="res://Scenes/inventory.tscn" id="5_b2bpf"]
 
 [node name="Game" type="Node2D" unique_id=243380344]
 
@@ -20,3 +21,7 @@ texture = ExtResource("4_b2bpf")
 scale = Vector2(12, 12)
 
 [node name="Player" parent="." unique_id=967191897 instance=ExtResource("3_b2bpf")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=433598858]
+
+[node name="Inventory" parent="CanvasLayer" unique_id=780562375 instance=ExtResource("5_b2bpf")]

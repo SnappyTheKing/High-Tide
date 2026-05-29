@@ -15,6 +15,10 @@ run/main_scene="uid://ccos82my76j4b"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+Globals="*uid://1d62xi4nmdrp"
+
 [input]
 
 accelerate={
