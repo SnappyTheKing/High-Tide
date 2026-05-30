@@ -2,7 +2,7 @@ extends Control
 
 @export var inventory_item: PackedScene
 
-@onready var item_container: GridContainer = $PanelContainer/ItemContainer
+@onready var item_container: GridContainer = %ItemContainer
 @onready var money: Label = $Money
 
 func _ready() -> void:
