@@ -2,15 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://c08c6mv3nbxtf" path="res://Scenes/player.tscn" id="3_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://dqkqv2qw1vhqq" path="res://Scenes/Map.tscn" id="3_kldst"]
+[ext_resource type="Resource" uid="uid://d1m3yxtw2qwdt" path="res://Resources/Maplewood_Bay.tres" id="4_7lihs"]
 [ext_resource type="Texture2D" uid="uid://cemhiibnjiu74" path="res://Assets/Upscaled-Map.png" id="4_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://51k7g0wlfbcl" path="res://Scenes/zone.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://bm0ixu5kkpcvc" path="res://Scenes/inventory.tscn" id="5_b2bpf"]
 
 [node name="Game" type="Node2D" unique_id=243380344]
-
-[node name="Zone" parent="." unique_id=44943583 instance=ExtResource("4_kldst")]
-position = Vector2(2139, -12098)
-scale = Vector2(3.2091932, 3.2091932)
 
 [node name="UpscalemediaTransformed" type="Sprite2D" parent="." unique_id=396593413]
 visible = false
@@ -19,6 +16,16 @@ texture = ExtResource("4_b2bpf")
 
 [node name="Map" parent="." unique_id=273789858 instance=ExtResource("3_kldst")]
 scale = Vector2(12, 12)
+
+[node name="Zones" type="Node2D" parent="." unique_id=352139834]
+
+[node name="Maplewood" parent="Zones" unique_id=243566282 instance=ExtResource("4_kldst")]
+position = Vector2(696, -3909)
+port = ExtResource("4_7lihs")
+
+[node name="Zone" parent="Zones" unique_id=44943583 instance=ExtResource("4_kldst")]
+position = Vector2(2139, -12098)
+scale = Vector2(3.2091932, 3.2091932)
 
 [node name="Player" parent="." unique_id=967191897 instance=ExtResource("3_b2bpf")]
 

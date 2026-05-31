@@ -3,13 +3,34 @@ extends Control
 @export var inventory_item: PackedScene
 
 @onready var item_container: GridContainer = %ItemContainer
-@onready var money: Label = $Money
+@onready var shop_image: TextureRect = %ItemImage
+@onready var money: Label = %Money
+
+var shop_item: Item
 
 func _ready() -> void:
+	hide()
+	
+	Globals.zone_entered.connect(_on_zone_entered)
+	Globals.zone_exited.connect(_on_zone_exited)
+	
 	var instance = inventory_item.instantiate()
 	item_container.add_child(instance)
 	instance.item_type = load("res://Resources/wood.tres")
-	
 
 func  _process(delta: float) -> void:
 	money.text = "Money: " + str(Globals.money)
+
+func _on_zone_entered(port: Port):
+	shop_item = port.sold_item
+	shop_image.texture = port.sold_item.sprite
+	show()
+
+func _on_zone_exited():
+	hide()
+
+
+func _on_buy_button_pressed() -> void:
+	var instance = inventory_item.instantiate()
+	item_container.add_child(instance)
+	instance.item_type = shop_item
