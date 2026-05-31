@@ -31,6 +31,8 @@ func _on_zone_exited():
 
 
 func _on_buy_button_pressed() -> void:
+	if item_container.get_child_count() >= 20:
+		return
 	var instance = inventory_item.instantiate()
 	item_container.add_child(instance)
 	instance.item_type = shop_item
