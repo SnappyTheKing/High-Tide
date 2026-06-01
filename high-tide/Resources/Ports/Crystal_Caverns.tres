@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Port" format=3 uid="uid://do6heug4lhfx0"]
+
+[ext_resource type="Script" uid="uid://bxl4dm81eec5g" path="res://Resources/Definitions/port_res.gd" id="1_0l4bs"]
+[ext_resource type="Resource" uid="uid://c2uhwy86ev7tu" path="res://Resources/Items/crystal.tres" id="2_4etl0"]
+
+[resource]
+script = ExtResource("1_0l4bs")
+sold_item = ExtResource("2_4etl0")
+name = "Crystal Caverns"
+metadata/_custom_type_script = "uid://bxl4dm81eec5g"

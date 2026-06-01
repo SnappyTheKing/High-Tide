@@ -2,10 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://c08c6mv3nbxtf" path="res://Scenes/player.tscn" id="3_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://dqkqv2qw1vhqq" path="res://Scenes/Map.tscn" id="3_kldst"]
-[ext_resource type="Resource" uid="uid://d1m3yxtw2qwdt" path="res://Resources/Maplewood_Bay.tres" id="4_7lihs"]
+[ext_resource type="Resource" uid="uid://d1m3yxtw2qwdt" path="res://Resources/Ports/Maplewood_Bay.tres" id="4_7lihs"]
 [ext_resource type="Texture2D" uid="uid://cemhiibnjiu74" path="res://Assets/Upscaled-Map.png" id="4_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://51k7g0wlfbcl" path="res://Scenes/zone.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://bm0ixu5kkpcvc" path="res://Scenes/inventory.tscn" id="5_b2bpf"]
+[ext_resource type="Resource" uid="uid://k6bgvbhurtni" path="res://Resources/Ports/Stone_Quarry.tres" id="5_fgofq"]
+[ext_resource type="Resource" uid="uid://do6heug4lhfx0" path="res://Resources/Ports/Crystal_Caverns.tres" id="6_2irst"]
+[ext_resource type="Texture2D" uid="uid://bm8c84n3t16f1" path="res://Assets/Map.png" id="9_bf53h"]
 
 [node name="Game" type="Node2D" unique_id=243380344]
 
@@ -20,15 +23,43 @@ scale = Vector2(12, 12)
 [node name="Zones" type="Node2D" parent="." unique_id=352139834]
 
 [node name="Maplewood" parent="Zones" unique_id=243566282 instance=ExtResource("4_kldst")]
-position = Vector2(696, -3909)
+position = Vector2(5874, -5524)
+scale = Vector2(3, 3)
 port = ExtResource("4_7lihs")
 
-[node name="Zone" parent="Zones" unique_id=44943583 instance=ExtResource("4_kldst")]
-position = Vector2(2139, -12098)
-scale = Vector2(3.2091932, 3.2091932)
+[node name="Quarry" parent="Zones" unique_id=44943583 instance=ExtResource("4_kldst")]
+position = Vector2(20632, 24899)
+scale = Vector2(3, 3)
+port = ExtResource("5_fgofq")
+
+[node name="Zone" parent="Zones" unique_id=1383414650 instance=ExtResource("4_kldst")]
+position = Vector2(2993, 10453)
+scale = Vector2(3, 3)
+port = ExtResource("6_2irst")
 
 [node name="Player" parent="." unique_id=967191897 instance=ExtResource("3_b2bpf")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=433598858]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1044194968]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1791996561]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.72668
+offset_bottom = 177.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+texture = ExtResource("9_bf53h")
+expand_mode = 1
 
 [node name="Inventory" parent="CanvasLayer" unique_id=780562375 instance=ExtResource("5_b2bpf")]

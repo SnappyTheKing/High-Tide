@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c2uhwy86ev7tu"]
+
+[ext_resource type="Script" uid="uid://bfaulagbdswmk" path="res://Resources/Definitions/item_res.gd" id="1_bgkyf"]
+[ext_resource type="Texture2D" uid="uid://c0g4jyevepuy" path="res://Assets/crystal.jpg" id="2_uitqf"]
+
+[resource]
+script = ExtResource("1_bgkyf")
+sprite = ExtResource("2_uitqf")
+name = "Crystal"
+value = 75
+metadata/_custom_type_script = "uid://bfaulagbdswmk"

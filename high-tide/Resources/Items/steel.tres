@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://vuxq1kaaipyw"]
+
+[ext_resource type="Script" uid="uid://bfaulagbdswmk" path="res://Resources/Definitions/item_res.gd" id="1_4drpr"]
+[ext_resource type="Texture2D" uid="uid://b6ob11neo1fwc" path="res://Assets/steel.jpg" id="2_dqe4w"]
+
+[resource]
+script = ExtResource("1_4drpr")
+sprite = ExtResource("2_dqe4w")
+name = "Steel"
+value = 50
+metadata/_custom_type_script = "uid://bfaulagbdswmk"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://daafb8hhdlgu6"]
+
+[ext_resource type="Script" uid="uid://bfaulagbdswmk" path="res://Resources/Definitions/item_res.gd" id="1_6vi64"]
+[ext_resource type="Texture2D" uid="uid://ds28ykudsd1rb" path="res://Assets/fruit.jpg" id="2_e0hhb"]
+
+[resource]
+script = ExtResource("1_6vi64")
+sprite = ExtResource("2_e0hhb")
+name = "(Exotic) Fruit"
+value = 200
+metadata/_custom_type_script = "uid://bfaulagbdswmk"

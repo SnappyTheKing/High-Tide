@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://df6biqkac4tl4"]
+
+[ext_resource type="Script" uid="uid://bfaulagbdswmk" path="res://Resources/Definitions/item_res.gd" id="1_l0ucx"]
+[ext_resource type="Texture2D" uid="uid://dgu0bbgwbiiv5" path="res://Assets/fish.jpg" id="2_o41t6"]
+
+[resource]
+script = ExtResource("1_l0ucx")
+sprite = ExtResource("2_o41t6")
+name = "Fish"
+value = 30
+metadata/_custom_type_script = "uid://bfaulagbdswmk"

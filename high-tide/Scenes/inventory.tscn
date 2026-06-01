@@ -81,6 +81,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="BuyButton" type="Button" parent="HBoxContainer/BuyPanel/VBoxContainer/MarginContainer" unique_id=1137551375]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
