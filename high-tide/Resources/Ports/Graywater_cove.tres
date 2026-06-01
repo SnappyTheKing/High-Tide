@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Port" format=3 uid="uid://bc0tf3o1jl450"]
+
+[ext_resource type="Script" uid="uid://bxl4dm81eec5g" path="res://Resources/Definitions/port_res.gd" id="1_tegqd"]
+[ext_resource type="Resource" uid="uid://vuxq1kaaipyw" path="res://Resources/Items/steel.tres" id="2_mvmsc"]
+
+[resource]
+script = ExtResource("1_tegqd")
+sold_item = ExtResource("2_mvmsc")
+name = "Graywater Cove"
+metadata/_custom_type_script = "uid://bxl4dm81eec5g"

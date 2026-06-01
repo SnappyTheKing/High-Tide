@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Port" format=3 uid="uid://burploxtqd7jg"]
+
+[ext_resource type="Script" uid="uid://bxl4dm81eec5g" path="res://Resources/Definitions/port_res.gd" id="1_y8c3s"]
+[ext_resource type="Resource" uid="uid://bktefhsuviuhq" path="res://Resources/Items/sand.tres" id="2_f462u"]
+
+[resource]
+script = ExtResource("1_y8c3s")
+sold_item = ExtResource("2_f462u")
+name = "Sunrize Beach"
+metadata/_custom_type_script = "uid://bxl4dm81eec5g"

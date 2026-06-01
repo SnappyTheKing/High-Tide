@@ -5,6 +5,7 @@ extends Control
 @onready var item_container: GridContainer = %ItemContainer
 @onready var shop_image: TextureRect = %ItemImage
 @onready var buy_button: Button = %BuyButton
+@onready var port_name: Label = %PortName
 @onready var money: Label = %Money
 
 var shop_item: Item
@@ -26,6 +27,7 @@ func _on_zone_entered(port: Port):
 	shop_item = port.sold_item
 	shop_image.texture = port.sold_item.sprite
 	buy_button.text = "Buy " + shop_item.name + " - $" + str(shop_item.value)
+	port_name.text = port.name
 	show()
 
 func _on_zone_exited():
