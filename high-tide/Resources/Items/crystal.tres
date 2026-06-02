@@ -7,5 +7,5 @@
 script = ExtResource("1_bgkyf")
 sprite = ExtResource("2_uitqf")
 name = "Crystal"
-value = 75
+value = 150
 metadata/_custom_type_script = "uid://bfaulagbdswmk"

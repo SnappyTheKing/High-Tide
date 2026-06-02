@@ -6,7 +6,6 @@ extends Control
 @onready var shop_image: TextureRect = %ItemImage
 @onready var buy_button: Button = %BuyButton
 @onready var port_name: Label = %PortName
-@onready var money: Label = %Money
 
 var shop_item: Item
 
@@ -20,8 +19,7 @@ func _ready() -> void:
 	#item_container.add_child(instance)
 	#instance.item_type = load("res://Resources/Items/wood.tres")
 
-func  _process(delta: float) -> void:
-	money.text = "Money: " + str(Globals.money)
+
 
 func _on_zone_entered(port: Port):
 	shop_item = port.sold_item
@@ -35,7 +33,7 @@ func _on_zone_exited():
 
 
 func _on_buy_button_pressed() -> void:
-	if item_container.get_child_count() >= 20 or Globals.money < shop_item.value:
+	if item_container.get_child_count() >= Globals.player_stats.inventory_size or Globals.money < shop_item.value:
 		return
 	
 	Globals.money -= shop_item.value

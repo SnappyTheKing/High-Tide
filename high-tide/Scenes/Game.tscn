@@ -5,10 +5,18 @@
 [ext_resource type="Resource" uid="uid://d1m3yxtw2qwdt" path="res://Resources/Ports/Maplewood_Bay.tres" id="4_7lihs"]
 [ext_resource type="Texture2D" uid="uid://cemhiibnjiu74" path="res://Assets/Upscaled-Map.png" id="4_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://51k7g0wlfbcl" path="res://Scenes/zone.tscn" id="4_kldst"]
+[ext_resource type="Resource" uid="uid://burploxtqd7jg" path="res://Resources/Ports/Sunrize_Beach.tres" id="5_4q8tf"]
 [ext_resource type="PackedScene" uid="uid://bm0ixu5kkpcvc" path="res://Scenes/inventory.tscn" id="5_b2bpf"]
 [ext_resource type="Resource" uid="uid://k6bgvbhurtni" path="res://Resources/Ports/Stone_Quarry.tres" id="5_fgofq"]
 [ext_resource type="Resource" uid="uid://do6heug4lhfx0" path="res://Resources/Ports/Crystal_Caverns.tres" id="6_2irst"]
+[ext_resource type="Resource" uid="uid://daul316nvvw12" path="res://Resources/Boats/Yacht.tres" id="8_dahhg"]
+[ext_resource type="Resource" uid="uid://dgrv26m2hkcrx" path="res://Resources/Ports/Angler_Inlet.tres" id="8_x3xnh"]
+[ext_resource type="Resource" uid="uid://bgyo4ny0uqdd7" path="res://Resources/Boats/CargoShip.tres" id="9_3cx6b"]
+[ext_resource type="Resource" uid="uid://bl8xmao8jjt8a" path="res://Resources/Ports/Pinapple_Port.tres" id="9_8r6kd"]
+[ext_resource type="Script" uid="uid://dhlj4t0dnktq" path="res://Scenes/money.gd" id="9_71axn"]
 [ext_resource type="Texture2D" uid="uid://bm8c84n3t16f1" path="res://Assets/Map.png" id="9_bf53h"]
+[ext_resource type="Resource" uid="uid://bc0tf3o1jl450" path="res://Resources/Ports/Graywater_cove.tres" id="10_tfod6"]
+[ext_resource type="PackedScene" uid="uid://dw6jxisxdmgox" path="res://Scenes/upg_zone.tscn" id="11_3so38"]
 
 [node name="Game" type="Node2D" unique_id=243380344]
 
@@ -22,22 +30,50 @@ scale = Vector2(12, 12)
 
 [node name="Zones" type="Node2D" parent="." unique_id=352139834]
 
-[node name="Maplewood" parent="Zones" unique_id=243566282 instance=ExtResource("4_kldst")]
+[node name="Wood" parent="Zones" unique_id=243566282 instance=ExtResource("4_kldst")]
 position = Vector2(5874, -5524)
 scale = Vector2(3, 3)
 port = ExtResource("4_7lihs")
 
-[node name="Quarry" parent="Zones" unique_id=44943583 instance=ExtResource("4_kldst")]
+[node name="Sand" parent="Zones" unique_id=44943583 instance=ExtResource("4_kldst")]
+position = Vector2(2987, 10188)
+scale = Vector2(3, 3)
+port = ExtResource("5_4q8tf")
+
+[node name="Stone" parent="Zones" unique_id=1365259775 instance=ExtResource("4_kldst")]
 position = Vector2(20632, 24899)
 scale = Vector2(3, 3)
 port = ExtResource("5_fgofq")
 
-[node name="Zone" parent="Zones" unique_id=1383414650 instance=ExtResource("4_kldst")]
-position = Vector2(2993, 10453)
+[node name="Crystal" parent="Zones" unique_id=1383414650 instance=ExtResource("4_kldst")]
+position = Vector2(-36264, 11019)
 scale = Vector2(3, 3)
 port = ExtResource("6_2irst")
 
+[node name="Fish" parent="Zones" unique_id=1885477858 instance=ExtResource("4_kldst")]
+position = Vector2(-24937, -22405)
+scale = Vector2(3, 3)
+port = ExtResource("8_x3xnh")
+
+[node name="Fruit" parent="Zones" unique_id=1918670618 instance=ExtResource("4_kldst")]
+position = Vector2(34065, -14237)
+scale = Vector2(3, 3)
+port = ExtResource("9_8r6kd")
+
+[node name="Steel" parent="Zones" unique_id=641430055 instance=ExtResource("4_kldst")]
+position = Vector2(11894, -23861)
+scale = Vector2(3, 3)
+port = ExtResource("10_tfod6")
+
+[node name="Upg_Zone" parent="Zones" unique_id=1688168342 node_paths=PackedStringArray("player") instance=ExtResource("11_3so38")]
+position = Vector2(9772, 3448)
+scale = Vector2(3, 3)
+player = NodePath("../../Player")
+yacht = ExtResource("8_dahhg")
+cargo = ExtResource("9_3cx6b")
+
 [node name="Player" parent="." unique_id=967191897 instance=ExtResource("3_b2bpf")]
+position = Vector2(5109, 6335)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=433598858]
 
@@ -61,5 +97,14 @@ grow_horizontal = 0
 size_flags_horizontal = 0
 texture = ExtResource("9_bf53h")
 expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1260378807]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Money" type="Label" parent="CanvasLayer/Control/PanelContainer" unique_id=1631032293]
+layout_mode = 2
+script = ExtResource("9_71axn")
 
 [node name="Inventory" parent="CanvasLayer" unique_id=780562375 instance=ExtResource("5_b2bpf")]

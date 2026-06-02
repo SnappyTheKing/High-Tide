@@ -16,11 +16,12 @@ var item_type: Item:
 
 func _on_button_pressed() -> void:
 	Globals.money += calculate_value(value, origin, Globals.current_port_position)
+	Globals.money = snapped(Globals.money, 0.01)
 	queue_free()
 
 func _on_button_mouse_entered() -> void:
-	button.tooltip_text = "Sell for $" + str(calculate_value(value, origin, Globals.current_port_position))
+	button.tooltip_text = "Sell for $" + str(snapped(calculate_value(value, origin, Globals.current_port_position), 0.01))
 
-func calculate_value(base: int, item_pos: Vector2, port_pos: Vector2) -> int:
+func calculate_value(base: float, item_pos: Vector2, port_pos: Vector2) -> float:
 	var mult = sqrt(item_pos.distance_to(port_pos) + 1) / 200
 	return (base * mult) + (base * 0.5)

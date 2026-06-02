@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Player" format=3 uid="uid://daul316nvvw12"]
+
+[ext_resource type="Script" uid="uid://cg3vaq6mslf7t" path="res://Resources/Definitions/boat_res.gd" id="1_d54ya"]
+
+[resource]
+script = ExtResource("1_d54ya")
+speed = 100
+drag = 0.98
+handling = 0.025
+inventory_size = 10
+cost = 1000
+metadata/_custom_type_script = "uid://cg3vaq6mslf7t"

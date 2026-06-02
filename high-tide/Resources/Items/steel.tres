@@ -7,5 +7,5 @@
 script = ExtResource("1_4drpr")
 sprite = ExtResource("2_dqe4w")
 name = "Steel"
-value = 50
+value = 75
 metadata/_custom_type_script = "uid://bfaulagbdswmk"

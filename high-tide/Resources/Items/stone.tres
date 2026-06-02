@@ -7,5 +7,5 @@
 script = ExtResource("1_h106x")
 sprite = ExtResource("2_ws5bn")
 name = "stone"
-value = 20
+value = 10
 metadata/_custom_type_script = "uid://bfaulagbdswmk"
