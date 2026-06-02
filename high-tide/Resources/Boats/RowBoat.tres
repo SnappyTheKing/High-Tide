@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_tjs7m")
-speed = 25
-drag = 0.98
+speed = 30
+drag = 0.99
 handling = 0.03
 inventory_size = 5
 metadata/_custom_type_script = "uid://cg3vaq6mslf7t"

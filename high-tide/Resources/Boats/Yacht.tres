@@ -8,5 +8,5 @@ speed = 100
 drag = 0.98
 handling = 0.025
 inventory_size = 10
-cost = 1000
+cost = 100
 metadata/_custom_type_script = "uid://cg3vaq6mslf7t"
